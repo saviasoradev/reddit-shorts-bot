@@ -28,4 +28,4 @@ Reddit'ten (veya yapay zekadan) hikaye alıp, Türkçe seslendirilmiş, altyazı
 
 ## Notlar
 - Reddit hikayeleri telif ve YouTube "tekrarlanan içerik" politikalarına dikkat ederek kullanılmalı. Her videoya kendi özgün dokunuşunu eklemen önerilir.
-- Anahtarlarını kimseyle paylaşma. Bir anahtar yanlışlıkla açığa çıktıysa hemen iptal edip yenisini oluştur.
+- Kendi avatarını koymak için avatar.png dosyasını kendi avatar resminle değiştir.
