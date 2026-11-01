@@ -1,5 +1,5 @@
 """
-REDDIT SHORTS BOT v2 - Tam otomatik YouTube Shorts fabrikası
+REDDIT SHORTS GENERATOR - Tam otomatik YouTube Shorts üretici
 
 Yenilikler:
 - Çeviri/uyarlama Gemini veya Claude ile: seslendirmeye uygun, hook'lu, yazım denetimli Türkçe
@@ -914,7 +914,7 @@ def banner(count, source, bg):
     w = 60
     print()
     print(f"{C.MAG}╔{'═' * w}╗{C.R}")
-    print(f"{C.MAG}║{C.R}{C.B}{'REDDIT SHORTS FABRİKASI'.center(w)}{C.R}{C.MAG}║{C.R}")
+    print(f"{C.MAG}║{C.R}{C.B}{'REDDIT SHORTS GENERATOR'.center(w)}{C.R}{C.MAG}║{C.R}")
     print(f"{C.MAG}╚{'═' * w}╝{C.R}")
     print(f"  {C.GRY}Video sayısı{C.R} {C.B}{count}{C.R}    {C.GRY}Kaynak{C.R} {source}    {C.GRY}Arka plan{C.R} {bg}")
 
@@ -1029,7 +1029,7 @@ async def run_batch(count, source, bg, progress=None, seconds=None):
 
 
 def build_parser():
-    ap = argparse.ArgumentParser(description="Reddit Shorts Fabrikası")
+    ap = argparse.ArgumentParser(description="Reddit Shorts Generator")
     ap.add_argument("--count", type=int, default=1, help="Kaç video üretilsin (1-50)")
     ap.add_argument("--source", choices=["reddit", "ai"], default="reddit",
                     help="reddit: Reddit'ten uyarla, ai: konudan özgün hikaye")
@@ -1063,7 +1063,7 @@ def launch_gui():
     BGC, FG, CARD, ACC = "#0f0f13", "#e8e8ee", "#1a1a22", "#ff4500"
 
     root = tk.Tk()
-    root.title("Reddit Shorts Fabrikası")
+    root.title("Reddit Shorts Generator")
     root.geometry("820x640")
     root.minsize(660, 500)
     root.configure(bg=BGC)
@@ -1090,7 +1090,7 @@ def launch_gui():
 
     top = ttk.Frame(root, padding=(24, 20, 24, 8))
     top.pack(fill="x")
-    ttk.Label(top, text="Reddit Shorts Fabrikası", style="Head.TLabel").pack(anchor="w")
+    ttk.Label(top, text="Reddit Shorts Generator", style="Head.TLabel").pack(anchor="w")
     ttk.Label(top, text="Kaç video üretilsin? Ayarları seç, başlat.",
               style="Sub.TLabel").pack(anchor="w", pady=(2, 14))
 

@@ -1,4 +1,4 @@
-# Reddit Shorts Fabrikası
+# Reddit Shorts Generator
 
 Reddit'ten (veya yapay zekadan) hikaye alıp, Türkçe seslendirilmiş, altyazılı, dikey YouTube Shorts videosu üreten Python aracı.
 
