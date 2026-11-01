@@ -15,8 +15,3 @@ __pycache__/
 full_background.mp4
 slime_background.mp4
 bg_music.mp3
-
-# PyInstaller çıktıları
-build/
-dist/
-*.spec
