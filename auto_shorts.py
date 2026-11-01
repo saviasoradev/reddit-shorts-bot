@@ -34,7 +34,11 @@ if sys.platform == "win32":
         pass
 
 # ==================== AYARLAR ====================
-WORK_DIR = os.path.dirname(os.path.abspath(__file__))
+# exe olarak paketlenmişse proje klasörü exe'nin yanıdır, değilse script'in yanı
+if getattr(sys, "frozen", False):
+    WORK_DIR = os.path.dirname(os.path.abspath(sys.executable))
+else:
+    WORK_DIR = os.path.dirname(os.path.abspath(__file__))
 os.chdir(WORK_DIR)
 
 
@@ -140,7 +144,10 @@ def sanitize_script(text: str) -> str:
 
 # ==================== MATERYALLER ====================
 def ytdlp(args):
-    subprocess.run([sys.executable, "-m", "yt_dlp", "--no-playlist"] + args, check=True)
+    """yt-dlp'yi çağırır. exe'de sys.executable bizim exe olduğu için PATH'teki yt-dlp kullanılır."""
+    exe = shutil.which("yt-dlp")
+    base = [exe] if exe else [sys.executable, "-m", "yt_dlp"]
+    subprocess.run(base + ["--no-playlist"] + args, check=True)
 
 
 def fetch_pixabay_slime_video(api_key: str, output_path: str) -> bool:
