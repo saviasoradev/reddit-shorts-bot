@@ -1,0 +1,7 @@
+requests
+edge-tts
+openai-whisper
+yt-dlp
+google-genai
+pillow
+anthropic

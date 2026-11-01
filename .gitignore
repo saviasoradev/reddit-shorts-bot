@@ -1,0 +1,17 @@
+# Gizli anahtarlar
+.env
+
+# Üretilen çıktılar ve geçici dosyalar
+*.mp4
+*.mp3
+*.ass
+*.txt
+!requirements.txt
+used_stories.txt
+_segments/
+__pycache__/
+
+# Büyük arka plan videoları (kendin indirirsin)
+full_background.mp4
+slime_background.mp4
+bg_music.mp3
